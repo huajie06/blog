@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="/blog/static/style.css">
+<link rel="stylesheet" href="/blog/pygments.css">
+
+    <head>
+        <title>
+        About This Blog
+         </title>
+    </head>
+<body>
+
+<div class="wrapper">
+    <div class="index-header" id="header">Some Random Stuff</div>
+
+    <div class="top_nav">
+        <a href="/blog/index">Home</a>
+        <a href="/blog/about">About</a>
+    </div>
+        
+
+
+        
+
+
+
+
+    
+<div class="post_content">
+    <div class="post_title">
+        <h2>About This Blog</h2>
+    </div>
+
+    <div class="post_date">
+        2019-12-17 21:48:00
+    </div>
+    <hr class="article-block-div">
+    <div class="post_content">
+        
+        <p>Flask is a very easy to learn web development framework. Setting up a running application can be as short as 1 min. There are 
+a number of other routes I created but didn't end up showing up here, such as login, database connection, user profile pages and etc. Plan to push the statics files to GitHub page.</p>
+<p>Packages that I used in the blog</p>
+<ul>
+<li>Database(a lot more fun than I expected)<ul>
+<li>flask_sqlalchemy</li>
+<li>sqlalchemy</li>
+<li>there's an alternative way rather than flatpages which create a page to submit post, and it will be rendered successfully by <strong>Markup</strong> in <strong>flask</strong></li>
+<li>sqlalchemy has some nice raw function can be used when interact with database, such as <em>desc</em> I used, but can also use python to write your own script</li>
+<li>you can also create connection via <strong>sqlalchemy</strong></li>
+</ul>
+</li>
+<li>flask_flatpages<ul>
+<li>Static site would not enable this feature</li>
+<li>Posts are all in .md with YAML format</li>
+</ul>
+</li>
+<li>flask_login<ul>
+<li>which helps manage login</li>
+</ul>
+</li>
+<li>freeze <ul>
+<li>create all static files </li>
+</ul>
+</li>
+</ul>
+<h3>example to use sqlalchemy</h3>
+<p>Use <strong>scope_session</strong> when the app is wrapped in a function.</p>
+<p>A quick screate to </p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+<span class="kn">from</span> <span class="nn">database_setup</span> <span class="kn">import</span> <span class="n">Book</span><span class="p">,</span> <span class="n">Base</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///test.db&#39;</span><span class="p">)</span>
+<span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">bind</span> <span class="o">=</span> <span class="n">engine</span>
+<span class="n">DBSession</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">DBSession</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+   <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
+   <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+   <span class="n">username</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">250</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+   <span class="n">email</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">250</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+   <span class="n">aboutme</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">250</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="c1"># Base.metadata.create_all(engine)</span>
+    <span class="n">user1</span><span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;test@gmail.come&quot;</span><span class="p">,</span> <span class="n">aboutme</span><span class="o">=</span><span class="s2">&quot;i like bbq&quot;</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+
+<h3>CSS</h3>
+<p>End up using flexbox and grid to make to help with the layout. The concept makes a lot easier for people like me never did a web development project.</p>
+<h3>Things to do</h3>
+<ul>
+<li>Implement WYSIWYG editor</li>
+<li>Build user forms</li>
+</ul>
+<h3>Credit:</h3>
+<ul>
+<li><a href="https://kite.com/blog/python/flask-sqlalchemy-tutorial/">kite Flask SQLAlchemy Tutorial</a></li>
+<li><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">The Flask Mega-Tutorial</a></li>
+<li><a href="https://www.freecodecamp.org/news/flexbox-the-ultimate-css-flex-cheatsheet/">Flexbox - The Ultimate CSS Flex Cheatsheet</a></li>
+</ul>
+        
+    </div>
+
+    <div class="link_tags">
+    
+    <span>&num;<a href="/blog/tags/flask">flask</a></span>
+    
+    <span>&num;<a href="/blog/tags/python">python</a></span>
+    
+    <span>&num;<a href="/blog/tags/css">css</a></span>
+    
+    </div>
+
+</div>
+        
+
+
+
+    <div id="footer">            
+        <script type="text/javascript">document.write(new Date().getFullYear());</script>
+        Copyright &copy; All rights reserved. 
+        <a href="">Questions</a>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
