@@ -13,9 +13,11 @@
 
   <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
   <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
   <link rel="stylesheet" href="/theme/css/theme.css">
 
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="/feeds/all.atom.xml">
   
   <meta name="description" content="Flask deployment">
 
@@ -26,8 +28,20 @@
   <header class="header">
     <div class="container">
 <div class="row">
-  <div class="col-sm-12">
+    <div class="col-sm-4">
+      <img class="img-fluid rounded" src=/pictures/profile.jpg width=200 height=200 alt="Huajie's Notes">
+    </div>
+  <div class="col-sm-8">
     <h1 class="title"><a href="/">Huajie's Notes</a></h1>
+      <p class="text-muted">A place where I keep some notes</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://www.huajiezhang.com/" target="_blank">Site</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/about.html">About</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fa fa-feed" href="/feeds/all.atom.xml" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fa fa-github" href="https://huajie06.github.io" target="_blank"></a></li>
+      </ul>
   </div>
 </div>    </div>
   </header>
@@ -48,9 +62,6 @@
           <i class="fa fa-folder-open-o"></i>
           <a href="/category/web.html">Web</a>
         </li>
-          <li class="list-inline-item">
-            <i class="fa fa-user-o"></i>
-              <a href="/author/huajie.html">huajie</a>          </li>
           <li class="list-inline-item">
             <i class="fa fa-files-o"></i>
               <a href="/tag/flask.html">#flask</a>,               <a href="/tag/python.html">#python</a>          </li>
@@ -220,7 +231,8 @@ tail -n <span class="m">20</span> /var/log/nginx/error.log
 </pre></div>
 
 
-<h3>TODO redirect to non www site - huajiezhang.com</h3>
+<h3>TODO</h3>
+<p>redirect to non www site - huajiezhang.com</p>
     </div>
   </article>
     </div>
@@ -230,7 +242,6 @@ tail -n <span class="m">20</span> /var/log/nginx/error.log
     <div class="container">
 <div class="row">
   <ul class="col-sm-6 list-inline">
-      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
     <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
     <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
       <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
