@@ -1,5 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Huajie's Notes</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-12-26T00:00:00-05:00</updated><subtitle>A place where I keep some notes</subtitle><entry><title>Python News Scraping Notes</title><link href="/posts/2019/12/26/python-news-scraping/" rel="alternate"></link><published>2019-12-26T00:00:00-05:00</published><updated>2019-12-26T00:00:00-05:00</updated><author><name>huajie</name></author><id>tag:None,2019-12-26:/posts/2019/12/26/python-news-scraping/</id><summary type="html">&lt;p&gt;The intention of this site was really for myself to have a place to scan a collection of news quickly. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Huajie's Notes</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-01-10T00:00:00-05:00</updated><subtitle>A place where I keep some notes</subtitle><entry><title>Org Mode</title><link href="/posts/2020/01/10/org-mode/" rel="alternate"></link><published>2020-01-10T00:00:00-05:00</published><updated>2020-01-10T00:00:00-05:00</updated><author><name>huajie</name></author><id>tag:None,2020-01-10:/posts/2020/01/10/org-mode/</id><summary type="html">&lt;p&gt;org mode settings and some common cmd&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Some settings&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;infile options&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#+todo: A B C | D E&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#+startup: showall&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#+author&lt;/code&gt; and etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Refresh the setting at top with &lt;code&gt;C-c C-c&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keys&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;insert a header &lt;code&gt;C-Enter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;insert a header with todo &lt;code&gt;S-C-Enter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;toggle a header with todo &lt;code&gt;S-left/right&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;complete &lt;code&gt;M-tab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;insert date/datetime &lt;code&gt;C-c .&lt;/code&gt;, and &lt;code&gt;C-u C-c .&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some convention&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Paragraph alignment like this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Markups&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Like following&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;example
+*bold*, /italic/, _underlined_, =code= and ~verbatim~, and, if you must, +strike-through+.&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add a tag&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;C-c C-c&lt;/code&gt; when are a header&lt;/li&gt;
+&lt;li&gt;Say if the TAGS are the following, can use hotkeys to pick
+    &lt;code&gt;#+TAGS: COMPUTER(c) PHONE(p) READING(r)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Planning&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;insert a schedule at &lt;strong&gt;current&lt;/strong&gt; item &lt;code&gt;C-c C-s&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;insert a deadlin at &lt;strong&gt;current&lt;/strong&gt; item &lt;code&gt;C-c C-d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;org-agenda to list all items&lt;ul&gt;
+&lt;li&gt;in order to display need to have &lt;strong&gt;todo&lt;/strong&gt; and &lt;strong&gt;time items&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Code block&lt;/h1&gt;
+&lt;p&gt;Use &lt;code&gt;org-display-inline-images&lt;/code&gt; to display the image&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#+BEGIN_SRC python :results output&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#+END_SRC&lt;/span&gt;
+
+&lt;span class="c1"&gt;#+RESULTS:&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;3.8&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;8.0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;fa919fdf25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Oct&lt;/span&gt; &lt;span class="mi"&gt;14&lt;/span&gt; &lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;27&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Clang&lt;/span&gt; &lt;span class="mf"&gt;6.0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clang&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;600.0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;57&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+
+&lt;span class="c1"&gt;#+begin_src python :results file&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
+&lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Agg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tight_layout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;savefig&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;python-matplot-fig.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;python-matplot-fig.png&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# return filename to org-mode&lt;/span&gt;
+&lt;span class="c1"&gt;#+end_src&lt;/span&gt;
+
+&lt;span class="c1"&gt;#+RESULTS:&lt;/span&gt;
+&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;matplot&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;todo items&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;sparse tree &lt;code&gt;C-c /&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="emacs"></category><category term="org-mode"></category></entry><entry><title>Python News Scraping Notes</title><link href="/posts/2019/12/26/python-news-scraping/" rel="alternate"></link><published>2019-12-26T00:00:00-05:00</published><updated>2019-12-26T00:00:00-05:00</updated><author><name>huajie</name></author><id>tag:None,2019-12-26:/posts/2019/12/26/python-news-scraping/</id><summary type="html">&lt;p&gt;The intention of this site was really for myself to have a place to scan a collection of news quickly. &lt;/p&gt;
 &lt;p&gt;The goal was to use Python to &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Request a news website xml/html feed &lt;/li&gt;
