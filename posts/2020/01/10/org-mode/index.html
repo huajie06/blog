@@ -68,21 +68,15 @@
       </ul>
     </header>
     <div class="content">
-      <h1>Some settings</h1>
-<ol>
-<li>
-<p>infile options</p>
+      <h2>Some settings</h2>
+<h3>Infile options</h3>
 <ul>
 <li><code>#+todo: A B C | D E</code></li>
 <li><code>#+startup: showall</code></li>
 <li><code>#+author</code> and etc.</li>
 </ul>
-</li>
-<li>
-<p>Refresh the setting at top with <code>C-c C-c</code></p>
-</li>
-<li>
-<p>Keys</p>
+<h3>Refresh the setting at top with <code>C-c C-c</code></h3>
+<h3>Keys</h3>
 <ul>
 <li>insert a header <code>C-Enter</code></li>
 <li>insert a header with todo <code>S-C-Enter</code></li>
@@ -90,44 +84,36 @@
 <li>complete <code>M-tab</code></li>
 <li>insert date/datetime <code>C-c .</code>, and <code>C-u C-c .</code></li>
 </ul>
-</li>
-<li>
-<p>Some convention</p>
+<h3>Some convention</h3>
 <ul>
 <li>Paragraph alignment like this.</li>
 </ul>
-</li>
-<li>
-<p>Markups</p>
+<h3>Markups</h3>
 <ul>
-<li>
-<p>Like following</p>
-<p><code>example
-*bold*, /italic/, _underlined_, =code= and ~verbatim~, and, if you must, +strike-through+.</code></p>
-</li>
+<li>Like following</li>
 </ul>
-</li>
-<li>
-<p>Add a tag</p>
+<!-- end list -->
+
+<div class="highlight"><pre><span></span><span class="err">*bold*, /italic/, _underlined_, =code= and ~verbatim~, and, if you must, +strike-through+.</span>
+</pre></div>
+
+
+<h3>Add a tag</h3>
 <ul>
 <li>Use <code>C-c C-c</code> when are a header</li>
-<li>Say if the TAGS are the following, can use hotkeys to pick
-    <code>#+TAGS: COMPUTER(c) PHONE(p) READING(r)</code></li>
+<li>Say if the TAGS are the following, can use hotkeys to pick</li>
 </ul>
-</li>
-<li>
-<p>Planning</p>
+<p><code>#+TAGS: COMPUTER(c) PHONE(p) READING(r)</code></p>
+<h3>Planning</h3>
 <ul>
 <li>insert a schedule at <strong>current</strong> item <code>C-c C-s</code></li>
-<li>insert a deadlin at <strong>current</strong> item <code>C-c C-d</code></li>
+<li>insert a deadline at <strong>current</strong> item <code>C-c C-d</code></li>
 <li>org-agenda to list all items<ul>
 <li>in order to display need to have <strong>todo</strong> and <strong>time items</strong></li>
 </ul>
 </li>
 </ul>
-</li>
-</ol>
-<h1>Code block</h1>
+<h2>Code block</h2>
 <p>Use <code>org-display-inline-images</code> to display the image</p>
 <div class="highlight"><pre><span></span><span class="c1">#+BEGIN_SRC python :results output</span>
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -155,7 +141,17 @@
 </pre></div>
 
 
-<h1>todo items</h1>
+<h2>Manage notes</h2>
+<h3>capture notes</h3>
+<ul>
+<li>User M-x org-capture and set up <code>org-default-notes-file</code></li>
+<li>Set up keys <code>(define-key global-map "\C-cc" 'org-capture)</code></li>
+</ul>
+<h3>archive tasks</h3>
+<ul>
+<li><code>org-archive-subtree</code> or <code>\C-c $</code></li>
+</ul>
+<h2>TBC</h2>
 <ul>
 <li>sparse tree <code>C-c /</code></li>
 </ul>
